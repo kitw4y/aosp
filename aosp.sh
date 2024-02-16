@@ -1,14 +1,14 @@
 # sync rom
-repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs
-git clone https://github.com/kitw4y/local_manifest.git --depth 1 -b RisingOS-14 .repo/local_manifests
-repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
+git clone https://github.com/kitw4y/DeviceTree.git -b syberia-14 device/xiaomi/lancelot
+git clone https://gitlab.com/MT6768Lab/CommonDeviceTree.git -b 13 device/xiaomi/mt6768-common
+git clone https://gitlab.com/MT6768Lab/KernelTree.git -b 13 kernel/xiaomi/mt6768
+git clone https://gitlab.com/MT6768Lab/VendorTree.git -b 13 vendor/xiaomi
+git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr -b lineage-20 device/mediatek/sepolicy_vndr
+git clone https://github.com/LineageOS/android_hardware_mediatek -b lineage-20 hardware/mediatek
     
 # build rom  
-. build/envsetup.sh 
-lunch rising_lancelot-userdebug   
 export BUILD_USERNAME=lang
 export BUILD_HOSTNAME=lang            
 export KBUILD_BUILD_USER=lang    
 export KBUILD_BUILD_HOST=lang
 export TZ=Asia/Jakarta #put before last build command 
-m bacon
