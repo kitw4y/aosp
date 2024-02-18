@@ -2,6 +2,7 @@
 repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs
 git clone https://github.com/kitw4y/local_manifest.git --depth 1 -b RisingOS-14 .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
+repo sync -j15 --fail-fast
     
 # build rom  
 . build/envsetup.sh 
