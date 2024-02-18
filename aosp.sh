@@ -1,5 +1,5 @@
 # sync rom
-repo init -u https://github.com/kitw4y/manifest.git -b 14.0 --git-lfs
+repo init -u https://github.com/syberia-project/manifest.git -b 14.0 --git-lfs
 repo sync -c --force-sync --no-tags --no-clone-bundle -j14 --optimized-fetch --prune
 repo sync -j15 --fail-fast
 git clone https://github.com/kitw4y/DeviceTree.git -b syberia-14 device/xiaomi/lancelot
@@ -8,7 +8,6 @@ git clone https://gitlab.com/MT6768Lab/KernelTree.git -b 13 kernel/xiaomi/mt6768
 git clone https://gitlab.com/MT6768Lab/VendorTree.git -b 13 vendor/xiaomi
 git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr -b lineage-20 device/mediatek/sepolicy_vndr
 git clone https://github.com/LineageOS/android_hardware_mediatek -b lineage-20 hardware/mediatek
-git clone https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86 prebuilts/clang/host/linux-x86
     
 # build rom  
 source build/envsetup.sh
