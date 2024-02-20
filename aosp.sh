@@ -4,6 +4,8 @@ git clone https://github.com/kitw4y/local_manifest.git --depth 1 -b RisingOS-14 
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
     
 # build rom  
+rm -rf toolchain/pgo-profiles
+git clone https://android.googlesource.com/toolchain/pgo-profiles toolchain/pgo-profiles
 . build/envsetup.sh 
 lunch rising_lancelot-userdebug   
 export BUILD_USERNAME=lang
