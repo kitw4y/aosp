@@ -6,6 +6,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom  
 rm -rf toolchain/pgo-profiles
 git clone https://android.googlesource.com/toolchain/pgo-profiles toolchain/pgo-profiles
+sudo apt install ccache -y
 . build/envsetup.sh 
 lunch rising_lancelot-userdebug   
 export BUILD_USERNAME=lang
