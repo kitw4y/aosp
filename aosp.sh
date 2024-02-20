@@ -7,6 +7,7 @@ repo sync -c -j4 --force-sync --no-clone-bundle --no-tags
 # build rom  
 rm -rf toolchain/pgo-profiles
 git clone https://android.googlesource.com/toolchain/pgo-profiles toolchain/pgo-profiles
+sudo apt update
 sudo apt install ccache -y
 source build/envsetup.sh 
 opt_patch
