@@ -1,6 +1,6 @@
 # sync rom
 rm -rf .repo/local_manifests
-repo init -u https://github.com/CipherOS/android_manifest.git -b fourteen --git-lfs --depth=1
+repo init -u https://github.com/CipherOS/android_manifest.git -b fourteen
 git clone https://github.com/kitw4y/local_manifest.git --depth 1 -b RisingOS-14 .repo/local_manifests
 rm -rf prebuilts/clang/host/linux-x86/clang-latest external/chromium-webview
 repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
