@@ -2,7 +2,7 @@
 repo init -u https://github.com/CipherOS/android_manifest.git -b fourteen --git-lfs --depth=1
 git clone https://github.com/kitw4y/local_manifest.git --depth 1 -b RisingOS-14 .repo/local_manifests
 rm -rf prebuilts/clang/host/linux-x86/clang-latest external/chromium-webview
-repo sync -c -j4 --force-sync --no-clone-bundle --no-tags
+repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
     
 # build rom  
 rm -rf toolchain/pgo-profiles
