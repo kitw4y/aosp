@@ -1,8 +1,10 @@
 # sync rom
 rm -rf .repo/local_manifests
+mkdir lsng
+cd lsng
 repo init -u https://github.com/CipherOS/android_manifest.git -b fourteen
-rm -rf prebuilts/clang/host/linux-x86/clang-latest external/chromium-webview
 repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
+repo sync -j15 --fail-fast
 git clone https://github.com/kitw4y/DeviceTree.git -b cipher device/xiaomi/lancelot
 git clone https://gitlab.com/MT6768Lab/CommonDeviceTree.git -b 14 device/xiaomi/mt6768-common
 git clone https://gitlab.com/MT6768Lab/KernelTree.git -b 13 kernel/xiaomi/mt6768
