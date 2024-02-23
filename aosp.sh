@@ -20,6 +20,7 @@ rm -rf toolchain/pgo-profiles
 git clone https://android.googlesource.com/toolchain/pgo-profiles toolchain/pgo-profiles
 sudo apt update
 sudo apt install ccache -y
+export ALLOW_MISSING_DEPENDENCIES=true
 source build/envsetup.sh 
 breakfast lancelot
 lunch cipher_lancelot-userdebug
