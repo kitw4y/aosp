@@ -1,9 +1,16 @@
 # sync rom
 rm -rf .repo/local_manifests
 repo init -u https://github.com/CipherOS/android_manifest.git -b fourteen
-git clone https://github.com/kitw4y/local_manifest.git --depth 1 -b RisingOS-14 .repo/local_manifests
 rm -rf prebuilts/clang/host/linux-x86/clang-latest external/chromium-webview
 repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
+git clone https://github.com/kitw4y/DeviceTree.git -b cipher device/xiaomi/lancelot
+git clone https://gitlab.com/MT6768Lab/CommonDeviceTree.git -b 14 device/xiaomi/mt6768-common
+git clone https://gitlab.com/MT6768Lab/KernelTree.git -b 13 kernel/xiaomi/mt6768
+git clone https://gitlab.com/MT6768Lab/CommonVendorTree.git -b 14 vendor/xiaomi/mt6768-common
+git clone https://gitlab.com/MT6768Lab/VendorTree.git -b 14 vendor/xiaomi/lancelot
+git clone https://github.com/orkunergun/android_device_mediatek_sepolicy_vndr -b lineage-21 device/mediatek/sepolicy_vndr
+git clone https://github.com/orkunergun/android_hardware_mediatek -b lineage-21 hardware/mediatek
+git clone https://github.com/orkunergun/android_hardware_xiaomi -b lineage-21 hardware/xiaomi
     
 # build rom  
 rm -rf toolchain/pgo-profiles
