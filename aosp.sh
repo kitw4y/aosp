@@ -1,5 +1,6 @@
 # sync rom
 rm -rf .repo/local_manifests
+rm -rf lsng 
 mkdir lsng
 cd lsng
 repo init -u https://github.com/CipherOS/android_manifest.git -b fourteen
