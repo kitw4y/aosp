@@ -4,6 +4,7 @@ rm -rf lsng
 rm -rf .repo
 rm -rf /tmp/src/android/.repo
 repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs
+rm -rf prebuilts/clang/host/linux-x86/clang-latest external/chromium-webview
 repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
 repo sync -j15 --fail-fast
 git clone https://github.com/kitw4y/DeviceTree.git -b RisingOS-14 device/xiaomi/lancelot
@@ -20,8 +21,8 @@ sudo apt update
 sudo apt install ccache -y
 source build/envsetup.sh 
 opt_patch
-croot
 riseup lancelot userdebug
+croot
 export BUILD_USERNAME=lang
 export BUILD_HOSTNAME=lang            
 export KBUILD_BUILD_USER=lang    
