@@ -17,6 +17,8 @@ git clone https://github.com/orkunergun/android_hardware_mediatek -b lineage-21 
 git clone https://github.com/orkunergun/android_hardware_xiaomi -b lineage-21 hardware/xiaomi
     
 # build rom  
+rm -rf toolchain/pgo-profiles
+git clone https://android.googlesource.com/toolchain/pgo-profiles toolchain/pgo-profiles
 sudo apt update
 sudo apt install ccache -y
 source build/envsetup.sh 
