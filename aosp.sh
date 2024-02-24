@@ -3,7 +3,7 @@ rm -rf .repo/local_manifests
 rm -rf lsng 
 repo init -u https://github.com/Project-Elixir/manifest -b UNO --git-lfs
 rm -rf prebuilts/clang/host/linux-x86/clang-latest external/chromium-webview
-repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 repo sync -j15 --fail-fast
 git clone https://github.com/kitw4y/DeviceTree.git -b elixir device/xiaomi/lancelot
 git clone https://gitlab.com/MT6768Lab/CommonDeviceTree.git -b 14 device/xiaomi/mt6768-common
