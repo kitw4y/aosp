@@ -20,6 +20,7 @@ sudo apt update
 sudo apt install ccache -y
 source build/envsetup.sh 
 opt_patch
+croot
 riseup lancelot userdebug
 export BUILD_USERNAME=lang
 export BUILD_HOSTNAME=lang            
