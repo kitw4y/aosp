@@ -1,11 +1,10 @@
-# sync rom
 rm -rf .repo/local_manifests
 rm -rf lsng 
-repo init -u https://github.com/syberia-project/manifest.git -b 14.0 --git-lfs
+repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs
 rm -rf prebuilts/clang/host/linux-x86/clang-latest external/chromium-webview
-repo sync -c --force-sync --no-tags --no-clone-bundle -j$(nproc --all) --optimized-fetch --prune
+repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
 repo sync -j15 --fail-fast
-git clone https://github.com/kitw4y/DeviceTree.git -b 14 device/xiaomi/lancelot
+git clone https://github.com/kitw4y/DeviceTree.git -b RisingOS-14 device/xiaomi/lancelot
 git clone https://gitlab.com/MT6768Lab/CommonDeviceTree.git -b 14 device/xiaomi/mt6768-common
 git clone https://gitlab.com/MT6768Lab/KernelTree.git -b 13 kernel/xiaomi/mt6768
 git clone https://gitlab.com/MT6768Lab/CommonVendorTree.git -b 14 vendor/xiaomi/mt6768-common
@@ -20,10 +19,12 @@ git clone https://android.googlesource.com/toolchain/pgo-profiles toolchain/pgo-
 sudo apt update
 sudo apt install ccache -y
 source build/envsetup.sh 
-lunch syberia_lancelot-userdebug
+opt_patch
+riseup lancelot userdebug
+croot
 export BUILD_USERNAME=lang
 export BUILD_HOSTNAME=lang            
 export KBUILD_BUILD_USER=lang    
 export KBUILD_BUILD_HOST=lang
 export TZ=Asia/Jakarta #put before last build command 
-mka syberia
+ascend
