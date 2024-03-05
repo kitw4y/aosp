@@ -15,13 +15,12 @@ sudo rm -rf hardware/mediatek
 sudo rm -rf hardware/xiaomi
 git clone https://github.com/RisingTechOSS/android_frameworks_av.git -b fourteen frameworks/av
 git clone https://github.com/kitw4y/DeviceTree.git -b RisingOS-14 device/xiaomi/lancelot
-git clone https://gitlab.com/MT6768Lab/CommonDeviceTree.git -b 14 device/xiaomi/mt6768-common
-git clone https://gitlab.com/MT6768Lab/KernelTree.git -b 13 kernel/xiaomi/mt6768
-git clone https://gitlab.com/MT6768Lab/CommonVendorTree.git -b 14 vendor/xiaomi/mt6768-common
-git clone https://gitlab.com/MT6768Lab/VendorTree.git -b 14 vendor/xiaomi/lancelot
+git clone https://github.com/SuperiorOS-Devices/device_xiaomi_mt6768-common.git -b fourteen device/xiaomi/mt6768-common
+git clone https://github.com/Projects-Corruption-Succubus/HM6768.git kernel/xiaomi/mt6768
+git clone https://github.com/SuperiorOS-Devices/vendor_xiaomi_mt6768-common.git -b fourteen vendor/xiaomi
 git clone https://github.com/orkunergun/android_device_mediatek_sepolicy_vndr -b lineage-21 device/mediatek/sepolicy_vndr
-git clone https://github.com/orkunergun/android_hardware_mediatek -b lineage-21 hardware/mediatek
-git clone https://github.com/orkunergun/android_hardware_xiaomi -b lineage-21 hardware/xiaomi
+git clone https://github.com/Projects-Corruption-Succubus/android_hardware_mediatek.git hardware/mediatek
+git clone https://github.com/Projects-Corruption-Succubus/android_hardware_xiaomi.git hardware/xiaomi
     
 # build rom  
 sudo apt update
