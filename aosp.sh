@@ -14,7 +14,7 @@ sudo rm -rf device/mediatek/sepolicy_vndr
 sudo rm -rf hardware/mediatek
 sudo rm -rf hardware/xiaomi
 git clone https://github.com/RisingTechOSS/android_frameworks_av.git -b fourteen frameworks/av
-git clone https://github.com/kitw4y/DeviceTree.git -b RisingOS-14 device/xiaomi/lancelot
+git clone https://github.com/kitw4y/device_xiaomi_lancelot.git -b 14 device/xiaomi/lancelot
 git clone https://github.com/SuperiorOS-Devices/device_xiaomi_mt6768-common.git -b fourteen device/xiaomi/mt6768-common
 git clone https://github.com/Projects-Corruption-Succubus/HM6768.git kernel/xiaomi/mt6768
 git clone https://github.com/SuperiorOS-Devices/vendor_xiaomi_mt6768-common.git -b fourteen vendor/xiaomi
