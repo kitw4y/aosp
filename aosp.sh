@@ -9,6 +9,7 @@ sudo rm -rf device/xiaomi/mt6768-common
 sudo rm -rf kernel/xiaomi/mt6768
 sudo rm -rf vendor/xiaomi/mt6768-common
 sudo rm -rf vendor/xiaomi/lancelot
+sudo rm -rf vendor/xiaomi
 sudo rm -rf device/mediatek/sepolicy_vndr
 sudo rm -rf hardware/mediatek
 sudo rm -rf hardware/xiaomi
