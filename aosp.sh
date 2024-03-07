@@ -1,11 +1,8 @@
 rm -rf .repo/local_manifests
 rm -rf lsng 
 sudo rm -rf .repo
-sudo rm -rf *
 sudo rm -rf /tmp/src/android/.repo
-sudo rm -rf /tmp/src/android/*
 repo init -u https://github.com/CipherOS/android_manifest.git -b fourteen-qpr
-rm -rf prebuilts/clang/host/linux-x86/clang-latest external/chromium-webview
 repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
 repo sync -j15 --fail-fast
 sudo rm -rf device/xiaomi/lancelot
