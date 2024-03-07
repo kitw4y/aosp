@@ -1,3 +1,4 @@
+df -h
 rm -rf .repo/local_manifests
 rm -rf lsng 
 sudo rm -rf .repo
