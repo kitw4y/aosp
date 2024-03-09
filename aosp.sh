@@ -1,6 +1,3 @@
-sudo su
-sudo chmod +x *
-sudo apt update
 sudo apt install ccache -y
 source build/envsetup.sh
 opt_patch
