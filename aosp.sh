@@ -5,4 +5,4 @@ export BUILD_HOSTNAME=lang
 export KBUILD_BUILD_USER=lang    
 export KBUILD_BUILD_HOST=lang
 export TZ=Asia/Jakarta #put before last build command 
-mka bacon
+mka lancelot
