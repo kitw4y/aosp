@@ -1,3 +1,4 @@
+repo sync -j15 --fail-fast
 source build/envsetup.sh
 lunch cipher_lancelot-userdebug
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
