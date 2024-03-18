@@ -1,6 +1,7 @@
 rm -rf .repo/local_manifests
 rm -rf lsng 
 repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
+repo sync -j15 --fail-fast
 sudo rm -rf device/xiaomi/lancelot
 sudo rm -rf device/xiaomi/mt6768-common
 sudo rm -rf kernel/xiaomi/mt6768
