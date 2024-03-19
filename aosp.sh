@@ -20,7 +20,6 @@ git clone https://github.com/orkunergun/android_hardware_xiaomi -b lineage-21 ha
 sudo apt update
 sudo apt install ccache -y
 source build/envsetup.sh 
-opt_patch
 riseup lancelot userdebug
 croot
 export BUILD_USERNAME=lang
