@@ -15,9 +15,7 @@ git config --global --add safe.directory /tmp/src/android/device/qcom/*
 git config --global --add safe.directory /tmp/src/android/device/qcom/sepolicy-legacy-um
 git config --global --add safe.directory /tmp/src/android/device/*
 sudo git config --system --add safe.directory '*'
-sudo git config --system --add safe.directory *
-git am --abort
-git rebase --continue
+
 . build/envsetup.sh 
 riseup lancelot userdebug
 export BUILD_USERNAME=lang
@@ -26,4 +24,5 @@ export KBUILD_BUILD_USER=lang
 export KBUILD_BUILD_HOST=lang
 export TZ=Asia/Jakarta #put before last build command 
 export ALLOW_MISSING_DEPENDENCIES=true
+mka clean
 ascend
