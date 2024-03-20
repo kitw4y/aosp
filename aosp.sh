@@ -5,6 +5,8 @@ git config --global --add safe.directory /tmp/src/android/development
 git config --global --add safe.directory /tmp/src/android/device/generic/common
 git config --global --add safe.directory /tmp/src/android/device/generic/common
 git config --global --add safe.directory /tmp/src/android/device/google/atv
+git config --global --add safe.directory /tmp/src/android/device/google/contexthub
+git config --global --add safe.directory /tmp/src/android
 git am --abort
 . build/envsetup.sh 
 riseup lancelot userdebug
