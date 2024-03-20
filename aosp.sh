@@ -15,7 +15,7 @@ git config --global --add safe.directory /tmp/src/android/device/qcom/sepolicy-l
 sudo git config --system --add safe.directory '*'
 
 . build/envsetup.sh 
-riseup lancelot eng
+riseup lancelot userdebug
 export BUILD_USERNAME=lang
 export BUILD_HOSTNAME=lang            
 export KBUILD_BUILD_USER=lang    
