@@ -10,6 +10,8 @@ git config --global --add safe.directory /tmp/src/android
 git config --global --add safe.directory /tmp/src/android/device/lineage/atv
 git config --global --add safe.directory /tmp/src/android/device/lineage/car
 git config --global --add safe.directory /tmp/src/android/device/lineage
+git config --global --add safe.directory /tmp/src/android/device/qcom/sepolicy
+git config --global --add safe.directory /tmp/src/android/device/qcom
 git am --abort
 git rebase --continue
 . build/envsetup.sh 
