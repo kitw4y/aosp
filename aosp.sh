@@ -1,6 +1,7 @@
 # build rom  
 git config --global user.email lang@mail.com
 git config --global user.name lang
+git config --global --add safe.directory /tmp/src/android/development
 source build/envsetup.sh 
 lunch rising_lancelot-userdebug
 export BUILD_USERNAME=lang
