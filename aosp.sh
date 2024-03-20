@@ -4,6 +4,8 @@ git config --global user.name lang
 git config --global --add safe.directory /tmp/src/android/development
 git config --global --add safe.directory /tmp/src/android/device/generic/common
 git config --global --add safe.directory /tmp/src/android/device/generic/common
+git config --global --add safe.directory /tmp/src/android/device/google/atv
+git am --abort
 . build/envsetup.sh 
 riseup lancelot userdebug
 export BUILD_USERNAME=lang
