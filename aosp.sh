@@ -11,9 +11,7 @@ git config --global --add safe.directory /tmp/src/android/device/lineage/atv
 git config --global --add safe.directory /tmp/src/android/device/lineage/car
 git config --global --add safe.directory /tmp/src/android/device/lineage
 git config --global --add safe.directory /tmp/src/android/device/qcom/sepolicy
-git config --global --add safe.directory /tmp/src/android/device/qcom/*
 git config --global --add safe.directory /tmp/src/android/device/qcom/sepolicy-legacy-um
-git config --global --add safe.directory /tmp/src/android/device/*
 sudo git config --system --add safe.directory '*'
 
 . build/envsetup.sh 
