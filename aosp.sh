@@ -13,7 +13,7 @@ git config --global --add safe.directory /tmp/src/android/device/lineage
 git config --global --add safe.directory /tmp/src/android/device/qcom/sepolicy
 git config --global --add safe.directory /tmp/src/android/device/qcom/sepolicy-legacy-um
 sudo git config --system --add safe.directory '*'
-
+5731697441:AAGq5w6oTa3zJT5IZLc9QnjHGxJEt-4STOs
 . build/envsetup.sh 
 riseup lancelot userdebug
 export BUILD_USERNAME=lang
